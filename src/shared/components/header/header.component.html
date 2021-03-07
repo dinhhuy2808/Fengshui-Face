@@ -1,0 +1,31 @@
+<!-- header start -->
+<header id="sticky" class="sticky">
+  <div class="mobile-fix-option"></div>
+  <div class="top-header">
+    <div class="container">
+      HEADER
+    </div>
+  </div>
+</header>
+<!-- header end -->
+<div id="search-overlay" class="search-overlay d-block" *ngIf="showSearchOverlay">
+  <div>
+    <span class="closebtn" title="Close Overlay" (click)="closeSearch()">×</span>
+    <div class="overlay-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <form>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search a Product">
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

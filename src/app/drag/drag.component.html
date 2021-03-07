@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="row" *ngFor="let item of timelineByDay">
+		<div class="drag-container">
+			<div class="section-heading col-md-1">{{item.hour |
+				numberToHour}}</div>
+			<div class="col-md-11">
+				<div cdkDropList cdkDropListOrientation="horizontal"
+					id="{{item.hour}}" [cdkDropListData]="item.TimeLine"
+					[cdkDropListConnectedTo]="hour" class="example-list"
+					(cdkDropListDropped)="drop($event)">
+					<div class="example-box" *ngFor="let timeLine of item.TimeLine, let i = index"
+						cdkDrag>
+						<div class="time-line"
+						*ngIf="checkHourApplicable(item.hour,timeLine.startFrom)"
+						[ngStyle]="{'background-color': timeLine.color,height: (timeLine.startTo-timeLine.startFrom) | hourToPixel}"
+						style="cursor: pointer;z-index: 999;width: 100%;">
+						<p style="color: white;">{{days[i]}}</p>
+						<p style="color: white;">{{timeLine.place}}</p>
+						<p style="color: white;">{{timeLine.startFrom | numberToHour}} - {{timeLine.startTo | numberToHour}}</p>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

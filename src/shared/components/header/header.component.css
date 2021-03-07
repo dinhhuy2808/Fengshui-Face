@@ -1,0 +1,8 @@
+.logo {
+    width: 90px;
+    height: 45px;
+}
+
+.top-header .header-dropdown li a i.selected {
+    color: var(--color-selected-menu);
+}
