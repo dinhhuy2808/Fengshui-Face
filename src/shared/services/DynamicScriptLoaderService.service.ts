@@ -9,7 +9,8 @@ export const ScriptStore: Scripts[] = [
   { name: 'angular', src: 'https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js' },
   { name: 'drag-drop', src: '../../../assets/customed/js/drag-drop.js' },
   { name: 'jquery-1.12.4', src: '../../../assets/customed/js/jquery-1.12.4.js' },
-  { name: 'jquery-ui', src: '../../../assets/customed/js/jquery-ui.js' }
+  { name: 'jquery-ui', src: '../../../assets/customed/js/jquery-ui.js' },
+  { name: 'main', src: '../../../assets/js/main.js'}
 ];
 
 declare var document: any;
